@@ -111,20 +111,20 @@ Cloud functions allow me to run code in the cloud without managing servers. This
 
 **The first step is to set up the function in GCP:**
 
-In the top search bar, search for function and select Cloud Functions
+1.   In the top search bar, search for function and select Cloud Functions
 2.   Select ‘create function’
 3.   Enable all the required APIs – this can take a minute
 4.   Set the function name as something sensible
-5.   You can set the region to the same region as your sql database. This isn’t 100%           	necessary, but can reduce processing 
+5.   You can set the region to the same region as your sql database. This isn’t 100% necessary, but can reduce processing 
      times
-6.   Check “Allow unauthenticated invocations” – as we’re not using any sensitive 	                            	data, we can allow 
+6.   Check “Allow unauthenticated invocations” – as we’re not using any sensitive data, we can allow 
      this without too much worry.
 7.   Click “Next”
 8.   Enable any more APIs that pop up
 
 **In the second step you are connecting your function to your instance:**
 
-1. 	Navigate to Cloud Run by clicking on the name of your function in this box Click on “Edit and deploy new revision”
+1.  Navigate to Cloud Run by clicking on the name of your function in this box Click on “Edit and deploy new revision”
 2.  Scroll to the bottom of Container(s)
 3.  In Cloud SQL Connections, click Add Connection
 4.  Enable the Cloud SQL Admin API
@@ -155,7 +155,7 @@ How to schedule the function to run periodically:
 
 **4. Summary**
 
-The approach used aligns with the best practice for tech projects, which typically start with a straightforward approach before venturing into more complex and innovative solutions. This is precisely why I built first the pipeline locally and only migrated it to the cloud upon completion. You should always anticipate encountering arrows, discovering unforeseen requirements and generating fresh ideas along the way. Addressing these issues early on in an environment where debugging code and modifying database designs is straightforward, is key. This iterative approach ensures that you build a solid foundation for data pipeline, while allowing for flexibility and adaptability.
+The approach used aligns with the best practice for tech projects, which typically start with a straightforward approach before venturing into more complex and innovative solutions. This is precisely why I built first the pipeline locally and only migrated it to the cloud upon completion. You should always anticipate encountering errors, discovering unforeseen requirements and generating fresh ideas along the way. Addressing these issues early on in an environment where debugging code and modifying database designs is straightforward, is key. This iterative approach ensures that you build a solid foundation for data pipeline, while allowing for flexibility and adaptability.
 
 By the end of this project, my code is running in the cloud every day at 10 PM collecting data from the Internet and saving it to the cloud data instance. This journey has provided me with a solid grasp of the Data Engineering role, encompassing Web Scraping, API’s, local databases and automated data pipelines in the cloud. Here is a recap of the project:
 
